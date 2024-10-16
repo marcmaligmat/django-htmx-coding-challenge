@@ -51,7 +51,7 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
 
-    occupation = models.CharField(max_length=15)
+    occupation = models.CharField(max_length=15, blank=True, null=True)
 
     USERNAME_FIELD: str = "email"
     REQUIRED_FIELDS: List[str] = []
